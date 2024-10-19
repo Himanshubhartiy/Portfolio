@@ -211,7 +211,7 @@ function Contact() {
             </animated.div>
             <animated.div className="media" style={fadeIn6} ref={ref6}>
               <a
-                href="tel:+1234567890"
+                href="tel:8218281477"
                 target="_blank"
                 rel="noopener noreferrer"
               >

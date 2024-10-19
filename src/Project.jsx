@@ -1,26 +1,65 @@
 import React from "react";
-import project6 from "./assets/doodle_items.png";
+import { useInView } from "react-intersection-observer"; // For detecting scroll position
+import { useSpring, animated } from "@react-spring/web"; // For animations
 import project1 from "./assets/project1.png";
 import project2 from "./assets/project2.png";
 import project3 from "./assets/project3.png";
 import project4 from "./assets/project4.png";
 
 function Project() {
+  // Creating multiple Intersection Observers
+  const [ref, inView] = useInView({
+    threshold: 0.1, // Trigger animation when 10% of the element is visible
+  });
+  const [ref1, inView1] = useInView({ triggerOnce: true, threshold: 0.2 });
+  const [ref2, inView2] = useInView({ triggerOnce: true, threshold: 0.2 });
+  const [ref3, inView3] = useInView({ triggerOnce: true, threshold: 0.2 });
+  const [ref4, inView4] = useInView({ triggerOnce: true, threshold: 0.2 });
+
+  // Spring animations for each project, triggered when in view
+  const props = useSpring({
+    to: {
+      transform: inView ? "scale(1)" : "scale(0.8)", // Scale from 0.8 to 1
+      opacity: inView ? 1 : 0, // Fade in effect
+    },
+    config: { tension: 280, friction: 60 },
+  });
+  const fadeIn1 = useSpring({
+    opacity: inView1 ? 1 : 0,
+    transform: inView1 ? "translateY(0)" : "translateY(50px)",
+    config: { duration: 800 },
+  });
+  const fadeIn2 = useSpring({
+    opacity: inView2 ? 1 : 0,
+    transform: inView2 ? "translateY(0)" : "translateY(50px)",
+    config: { duration: 800 },
+  });
+  const fadeIn3 = useSpring({
+    opacity: inView3 ? 1 : 0,
+    transform: inView3 ? "translateY(0)" : "translateY(50px)",
+    config: { duration: 800 },
+  });
+  const fadeIn4 = useSpring({
+    opacity: inView4 ? 1 : 0,
+    transform: inView4 ? "translateY(0)" : "translateY(50px)",
+    config: { duration: 800 },
+  });
+
   return (
     <>
       <div className="">
         <div className="bg-image project">
           <div className="container" id="project__section">
-            <div>
-              <h2 className="text-center wow animate__animated animate__zoomIn">
+            <div ref={ref}>
+              <animated.h2 style={props} className="text-center">
                 My <span>Projects</span>
-              </h2>
+              </animated.h2>
             </div>
             <div className="row mt-5">
-              <div
-                className="col-lg-6 col-md-12 text-center align-content-center wow animate__animated animate__flipInY"
-                data-wow-duration="0.8s"
-                data-wow-delay="0.1s"
+              <animated.div
+                className="col-lg-6 col-md-12 text-center align-content-center"
+                style={fadeIn1}
+                ref={ref1}
               >
                 <a
                   href="https://grabstar.netlify.app/"
@@ -29,11 +68,11 @@ function Project() {
                 >
                   <img
                     src={project1}
-                    alt=""
+                    alt="Project 1"
                     className="project-card img-fluid"
                   />
                 </a>
-              </div>
+              </animated.div>
               <div className="col-lg-6 col-md-12 align-self-center">
                 <h3>01</h3>
                 <a
@@ -85,10 +124,10 @@ function Project() {
                   user-friendly interface.
                 </p>
               </div>
-              <div
-                className="col-lg-6 col-md-12 text-center align-content-center wow animate__animated animate__flipInY"
-                data-wow-duration="0.8s"
-                data-wow-delay="0.3s"
+              <animated.div
+                className="col-lg-6 col-md-12 text-center align-content-center"
+                style={fadeIn2}
+                ref={ref2}
               >
                 <a
                   href="https://ukbazaar.netlify.app/"
@@ -97,17 +136,17 @@ function Project() {
                 >
                   <img
                     src={project2}
-                    alt=""
+                    alt="Project 2"
                     className="project-card img-fluid"
                   />
                 </a>
-              </div>
+              </animated.div>
             </div>
             <div className="row mt-5">
-              <div
-                className="col-lg-6 col-md-12 text-center align-content-center wow animate__animated animate__flipInY"
-                data-wow-duration="0.8s"
-                data-wow-delay="0.5s"
+              <animated.div
+                className="col-lg-6 col-md-12 text-center align-content-center"
+                style={fadeIn3}
+                ref={ref3}
               >
                 <a
                   href="https://clashkick.netlify.app/"
@@ -116,11 +155,11 @@ function Project() {
                 >
                   <img
                     src={project3}
-                    alt=""
+                    alt="Project 3"
                     className="project-card img-fluid"
                   />
                 </a>
-              </div>
+              </animated.div>
               <div className="col-lg-6 col-md-12 align-self-center">
                 <h3>03</h3>
                 <a
@@ -168,10 +207,10 @@ function Project() {
                   and PHP for robust server-side logic.
                 </p>
               </div>
-              <div
-                className="col-lg-6 col-md-12 text-center align-content-center wow animate__animated animate__flipInY"
-                data-wow-duration="0.8s"
-                data-wow-delay="0.7s"
+              <animated.div
+                className="col-lg-6 col-md-12 text-center align-content-center"
+                style={fadeIn4}
+                ref={ref4}
               >
                 <a
                   href="https://kicknet.com"
@@ -180,11 +219,11 @@ function Project() {
                 >
                   <img
                     src={project4}
-                    alt=""
+                    alt="Project 4"
                     className="project-card img-fluid"
                   />
                 </a>
-              </div>
+              </animated.div>
             </div>
           </div>
         </div>

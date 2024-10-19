@@ -191,7 +191,7 @@ function Contact() {
             </animated.div>
             <animated.div className="media" style={fadeIn5} ref={ref5}>
               <a
-                href="https://mail.google.com/mail/u/0/#inbox"
+                href="mailto:himanshubhartiy99@gmail.com"
                 target="_blank"
                 rel="noopener noreferrer"
               >
@@ -210,7 +210,11 @@ function Contact() {
               </a>
             </animated.div>
             <animated.div className="media" style={fadeIn6} ref={ref6}>
-              <a>
+              <a
+                href="tel:+1234567890"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   viewBox="0 0 50 50"

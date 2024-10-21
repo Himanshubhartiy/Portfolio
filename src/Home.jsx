@@ -18,12 +18,12 @@ function Home() {
 
   const slideInUp = useSpring({
     transform: inView ? "translateY(0%)" : "translateY(100%)",
-    config: { duration: 900, delay: 700 },
+    config: { duration: 1000, delay: 900 },
   });
 
   const slideInUpFast = useSpring({
     transform: inView ? "translateY(0%)" : "translateY(100%)",
-    config: { duration: 300, delay: 100 },
+    config: { duration: 200, delay: 900 },
   });
 
   const fadeInImage = useSpring({

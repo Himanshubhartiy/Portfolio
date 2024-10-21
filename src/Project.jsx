@@ -99,7 +99,7 @@ function Project() {
                 </p>
               </div>
             </div>
-            <div className="row mt-5">
+            <div className="row project-even mt-5">
               <div className="col-lg-6 col-md-12 align-self-center">
                 <h3>02</h3>
                 <a
@@ -182,7 +182,7 @@ function Project() {
                 </p>
               </div>
             </div>
-            <div className="row mt-5">
+            <div className="row project-even mt-5">
               <div className="col-lg-6 col-md-12 align-self-center">
                 <h3>04</h3>
                 <a

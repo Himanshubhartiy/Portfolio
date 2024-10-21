@@ -93,7 +93,10 @@ function Contact() {
                 ></textarea>
               </div>
               <div className="col-12 text-start">
-                <button className="btn btn-primary btn-lg px-4" type="submit">
+                <button
+                  className="btn btn-primary btn-lg px-4 mb-4"
+                  type="submit"
+                >
                   Submit
                 </button>
               </div>
@@ -112,11 +115,11 @@ function Contact() {
         </div>
         <div className="row contact-links mt-4">
           <div className="col-12 text-center mb-5">
-            <div className="touch text-dark px-5 py-2 d-inline">
+            <div className="touch text-dark px-4 py-2 d-inline">
               Get In Touch
             </div>
           </div>
-          <div className="col d-flex justify-content-center gap-5 flex-wrap">
+          <div className="col-12 d-flex justify-content-center gap-5 flex-wrap">
             <animated.div className="media" style={fadeIn1} ref={ref1}>
               <a
                 href="https://www.linkedin.com/in/himanshu-bhartiy-087913266/"
@@ -126,8 +129,8 @@ function Contact() {
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   viewBox="0 0 30 30"
-                  width="60px"
-                  height="60px"
+                  width="50px"
+                  height="50px"
                 >
                   <g fill="#00adb5">
                     <path d="M24,4H6C4.895,4,4,4.895,4,6v18c0,1.105,0.895,2,2,2h18c1.105,0,2-0.895,2-2V6C26,4.895,25.105,4,24,4z M10.954,22h-2.95 v-9.492h2.95V22z M9.449,11.151c-0.951,0-1.72-0.771-1.72-1.72c0-0.949,0.77-1.719,1.72-1.719c0.948,0,1.719,0.771,1.719,1.719 C11.168,10.38,10.397,11.151,9.449,11.151z M22.004,22h-2.948v-4.616c0-1.101-0.02-2.517-1.533-2.517 c-1.535,0-1.771,1.199-1.771,2.437V22h-2.948v-9.492h2.83v1.297h0.04c0.394-0.746,1.356-1.533,2.791-1.533 c2.987,0,3.539,1.966,3.539,4.522V22z" />
@@ -144,8 +147,8 @@ function Contact() {
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   viewBox="0 0 24 24"
-                  width="60px"
-                  height="60px"
+                  width="50px"
+                  height="50px"
                 >
                   <g fill="#00adb5">
                     <path d="M 8 3 C 5.243 3 3 5.243 3 8 L 3 16 C 3 18.757 5.243 21 8 21 L 16 21 C 18.757 21 21 18.757 21 16 L 21 8 C 21 5.243 18.757 3 16 3 L 8 3 z M 8 5 L 16 5 C 17.654 5 19 6.346 19 8 L 19 16 C 19 17.654 17.654 19 16 19 L 8 19 C 6.346 19 5 17.654 5 16 L 5 8 C 5 6.346 6.346 5 8 5 z M 17 6 A 1 1 0 0 0 16 7 A 1 1 0 0 0 17 8 A 1 1 0 0 0 18 7 A 1 1 0 0 0 17 6 z M 12 7 C 9.243 7 7 9.243 7 12 C 7 14.757 9.243 17 12 17 C 14.757 17 17 14.757 17 12 C 17 9.243 14.757 7 12 7 z M 12 9 C 13.654 9 15 10.346 15 12 C 15 13.654 13.654 15 12 15 C 10.346 15 9 13.654 9 12 C 9 10.346 10.346 9 12 9 z" />

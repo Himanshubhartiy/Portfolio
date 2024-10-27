@@ -12,6 +12,7 @@ import About from "./About";
 import Project from "./Project";
 import Skills from "./Skills";
 import Contact from "./Contact";
+import Video from "./Video";
 
 function App() {
   return (
@@ -31,6 +32,7 @@ function App() {
               </>
             }
           />
+          <Route path="/video" element={<Video />} />
         </Routes>
       </Router>
     </>

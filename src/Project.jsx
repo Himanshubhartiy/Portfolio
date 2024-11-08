@@ -42,11 +42,6 @@ function Project() {
     config: { duration: 800 },
   });
 
-  // Event handler for opening Video.jsx in a new tab
-  const handleFourthImageClick = () => {
-    window.open("/video", "_blank"); // Assumes "/video" route is set up for Video.jsx
-  };
-
   return (
     <div className="">
       <div className="bg-image project">
@@ -191,8 +186,9 @@ function Project() {
             <div className="col-lg-6 col-md-12 align-self-center">
               <h3>04</h3>
               <a
-                href="/video"
+                href="https://www.linkedin.com/posts/activity-7260558940478853121-THzR?utm_source=share&utm_medium=member_desktop"
                 target="_blank"
+                rel="noopener noreferrer"
                 className="text-decoration-none text-light"
               >
                 <h4 className="mt-4">KickNet</h4>
@@ -215,13 +211,18 @@ function Project() {
               className="col-lg-6 col-md-12 text-center align-content-center"
               style={fadeIn4}
               ref={ref4}
-              onClick={handleFourthImageClick}
             >
-              <img
-                src={project4}
-                alt="Project 4"
-                className="project-card img-fluid"
-              />
+              <a
+                href="https://www.linkedin.com/posts/activity-7260558940478853121-THzR?utm_source=share&utm_medium=member_desktop"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <img
+                  src={project4}
+                  alt="Project 4"
+                  className="project-card img-fluid"
+                />
+              </a>
             </animated.div>
           </div>
         </div>

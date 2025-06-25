@@ -140,7 +140,7 @@ function Contact() {
             </animated.div>
             <animated.div className="media" style={fadeIn2} ref={ref2}>
               <a
-                href="https://www.instagram.com/himanshu_bharti_99/"
+                href="https://www.instagram.com/codeincorner/"
                 target="_blank"
                 rel="noopener noreferrer"
               >
